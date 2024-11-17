@@ -1,25 +1,44 @@
-body {
-  font-family: Arial, sans-serif;
-  background: #1d1d42;
-  color: #fff;
-  text-align: center;
-}
-
+/* Header styles */
 header {
-  background-color: #333;
-  padding: 1rem;
+  background-color: #333; /* Dark background color for the header */
+  padding: 1rem 2rem; /* Adds more padding on the left and right */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
+/* Styling for the h1 in the header */
 header h1 {
+  color: #fff; /* White text color for the title */
+  font-family: 'Roboto', sans-serif;
+  font-size: 2rem; /* Increase the font size */
+  letter-spacing: 1px;
   margin: 0;
 }
 
+/* Styling for the navigation links */
 nav a {
-  color: #ffcc00;
-  margin: 0 10px;
-  text-decoration: none;
+  color: #ffcc00; /* Yellow color for the links */
+  margin: 0 15px; /* Increased horizontal margin for more space between links */
+  text-decoration: none; /* Removes default underline */
+  font-size: 1rem; /* Sets a consistent font size */
+  font-weight: bold; /* Makes the links bold */
+  transition: color 0.3s, text-decoration 0.3s; /* Smooth transition for hover effects */
 }
 
+/* Hover effect for navigation links */
 nav a:hover {
-  text-decoration: underline;
+  text-decoration: underline; /* Underline links when hovered */
+  color: #f9a825; /* Change color on hover for a brighter yellow */
+}
+
+/* Optional: Make the navigation links more accessible on mobile */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
+  nav a {
+    margin: 10px 0; /* Stacks the links vertically with some margin */
+  }
 }

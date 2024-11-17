@@ -1,37 +1,38 @@
 <?php
-// Start the session if needed
 session_start();
 
-// Database credentials
 $servername = "localhost";
 $username = "root";
 $password = "Hitler123@kalyana";
-$dbname = "interior_design"; // Make sure this is your database name
+$dbname = "interior_design"; 
 
-// Create a connection to the database
 $conn = new mysqli($servername, $username, $password, $dbname);
 
-// Check connection
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-// Check if form data is submitted
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Retrieve form data
+
     $name = $_POST['name'];
     $email = $_POST['email'];
     $contact = $_POST['contact'];
     $address = $_POST['address'];
 
-    // Prepare and bind the SQL statement
+    // Prepare and execute the query to insert the client
     $stmt = $conn->prepare("INSERT INTO clients (name, email, contact, address) VALUES (?, ?, ?, ?)");
     $stmt->bind_param("ssss", $name, $email, $contact, $address);
 
-    // Execute the query and check if it was successful
     if ($stmt->execute()) {
+        // Retrieve the inserted client_id
+        $client_id = $conn->insert_id; // This gets the last inserted ID (the client's ID)
+
+        // Store the client_id in the session
+        $_SESSION['client_id'] = $client_id;
+
         echo "Client entry successful!";
-        header("Location: client.html?success=1"); // Redirect back to form with success
+        // Redirect to another page (e.g., client.html or dashboard)
+        header("Location: client.html?success=1"); 
         exit();
     } else {
         echo "Error: " . $stmt->error;

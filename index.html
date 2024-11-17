@@ -3,22 +3,115 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Interior Design Management System</title>
+    <title>DreamDwell</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Add some basic styling for buttons */
+        html,body {
+            height: 100%;               /* Ensure full height */
+    margin: 0;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-image: url("uploads/background.jpg"); /* Using a local image */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: aliceblue;
+}
+
+        header {
+            background-color: #8d87b8;
+            padding: 20px;
+        }
+        header h1 {
+    margin: 0;
+    font-family: 'Lobster', sans-serif; /* Applying the Lobster font */
+    font-size: 3em; /* Adjust the size as needed */
+    color: white;   /* Set the text color */
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    padding-left: 600px;
+    /* Align the text */
+}
+
+        main {
+            padding: 20px;
+        }
+        button {
+            font-size: 16px;
+            padding: 10px 20px;
+            margin: 10px;
+            cursor: pointer;
+            height: 100px;
+            font-family: 'Dancing Script', cursive;
+
+            width:150px;
+            background-color: #8d87b8;
+            border-radius: 30%;
+            color: rgb(44, 66, 137);
+        }
+        @media (max-width: 768px) {
+            .container {
+                width: 70%;
+                height:40%;
+                padding: 15px;
+            }
+            .user-icon {
+                width: 60px;
+                height: 60px;
+            }
+            h2 {
+                font-size: 20px;
+            }
+            .input-group input {
+                font-size: 13px;
+                padding: 8px;
+            }
+            .submit-button {
+                width: 100%;
+                font-size: 16px;
+            }
+            header h1 {
+               padding-right:500px ;
+            }
+
+
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                width: 95%;
+            }
+            h2 {
+                font-size: 18px;
+            }
+            .input-group input {
+                font-size: 12px;
+                padding: 6px;
+            }
+            .submit-button {
+                width: 100%;
+                font-size: 18px;
+            }
+            header h1 {
+               padding-right:500px ;
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
-        <h1>Interior Design Management System</h1>
-        <nav>
-            <a href="client.html">Client Details</a>
-            <a href="design.html">Designs</a>
-            <a href="booking.html">Bookings</a>
-            <a href="admin_dashboard.php">Admin</a>
-        </nav>
+        <h1>DreamDwell</h1>
     </header>
     <main>
-        <h2>Welcome to the Interior Design Management System</h2>
-        <p>This system allows you to manage client, design, and creator information.</p>
+        <h2>Welcome to the Home of Beautiful Interiors – Where Design Meets Elegance</h2>
+        <p>From Designs to installation to all things in between- we'll help you add your personality to your home.</p>
+        <!-- Buttons for navigation -->
+        <button onclick="location.href='client.html'"><b>Client Login</b></button>
+        <button onclick="location.href='admin_login.php'"><b>Admin Login</b></button>
     </main>
 </body>
 </html>

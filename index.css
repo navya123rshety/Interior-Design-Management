@@ -1,0 +1,90 @@
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to bottom, #57c1eb, #c76cc5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.container {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  width: 430px;
+  padding: 20px;
+  text-align: center;
+}
+
+.form-header {
+  margin-bottom: 20px;
+}
+
+.user-icon {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: #ddd;
+  display: inline-block;
+}
+
+h2 {
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.input-group {
+  margin-bottom: 20px;
+  text-align: left;
+  padding-right: 10px;
+}
+
+label {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 5px;
+  color: #666;
+}
+
+input[type="text"],
+input[type="email"] {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  outline: none;
+  font-size: 14px;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus {
+  border-color: #57c1eb;
+  box-shadow: 0 0 5px rgba(87, 193, 235, 0.5);
+}
+
+.button-group {
+  display: flex;
+  justify-content: space-around;
+}
+
+.submit-button,
+.view-button {
+  background: linear-gradient(to right, #57c1eb, #c76cc5);
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 14px;
+  width: 100px;
+  height: 50px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.submit-button:hover,
+.view-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}

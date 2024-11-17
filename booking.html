@@ -4,36 +4,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Booking</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="booking.css">
 </head>
 <body>
     <div class="container">
         <h2>Book Your Service</h2>
-        <form action="submit_booking.php" method="post">
-          <label for="id">Design ID:</label>
-          <input type="text" id="id" name="id" required><br><br>
-          
-          <label for="due_date">Due Date:</label>
-          <input type="date" id="due_date" name="due_date" required><br><br>
-          
-          <label for="service_type">Service Type:</label>
-          <input type="text" id="service_type" name="service_type" required><br><br>
-          
-          <label for="color_scheme">Color Scheme:</label>
-          <input type="text" id="color_scheme" name="color_scheme" required><br><br>
-          
-          <input type="submit" value="Book Design">
-      </form>
-      
-      
-        <p id="successMessage" style="display:none;">Booking Successful!</p>
+        <form action="submit_booking.php" method="POST">
+            <!-- Other booking details form fields -->
+        
+            <div class="input-group">
+                <label for="design_id">Design ID:</label>
+                <input type="text" id="design_id" name="design_id" required>
+            </div>
+        
+            <div class="input-group">
+                <label for="due_date">Due Date:</label>
+                <input type="date" id="due_date" name="due_date" required>
+            </div>
+        
+            <div class="input-group">
+                <label for="service_type">Service Type:</label>
+                <input type="text" id="service_type" name="service_type" required>
+            </div>
+            <div class="input-group">
+                <label for="color_scheme">Color Scheme:</label>
+                <input type="text" id="color_scheme" name="color_scheme" required>
+            </div>
+            <div class="button-group">
+                <input type="submit" value="Book Design" class="submit-button">
+            </div>
+        </form>
+        <p id="successMessage" class="success-message">Booking Successful!</p>
     </div>
-    
     <script>
         document.getElementById('bookingForm').addEventListener('submit', function(e) {
             e.preventDefault();
             document.getElementById('successMessage').style.display = 'block';
-            // Code to store booking data goes here
         });
     </script>
 </body>

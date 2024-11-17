@@ -2,7 +2,7 @@
 $servername = "localhost";
 $username = "root";
 $password = "Hitler123@kalyana";
-$dbname = "interior_design"; // Replace with your database name
+$dbname = "interior_design"; 
 
 $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
